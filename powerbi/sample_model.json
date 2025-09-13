@@ -1,0 +1,114 @@
+{
+  "model": {
+    "name": "GenBI Governance Harness - Synthetic Model",
+    "tables": [
+      {
+        "name": "Fact_Sales",
+        "columns": [
+          "store_id",
+          "week_start_date",
+          "sales_dollars",
+          "gross_margin_dollars"
+        ],
+        "measures": [
+          {
+            "name": "Sales $",
+            "expression": "SUM(Fact_Sales[sales_dollars])"
+          },
+          {
+            "name": "Gross Margin $",
+            "expression": "SUM(Fact_Sales[gross_margin_dollars])"
+          },
+          {
+            "name": "Gross Margin %",
+            "expression": "DIVIDE([Gross Margin $], [Sales $])"
+          }
+        ]
+      },
+      {
+        "name": "Fact_Payroll",
+        "columns": [
+          "store_id",
+          "week_start_date",
+          "payroll_dollars",
+          "payroll_hours"
+        ],
+        "measures": [
+          {
+            "name": "Payroll $",
+            "expression": "SUM(Fact_Payroll[payroll_dollars])"
+          },
+          {
+            "name": "Payroll Hours",
+            "expression": "SUM(Fact_Payroll[payroll_hours])"
+          },
+          {
+            "name": "Payroll-to-Sales %",
+            "expression": "DIVIDE([Payroll $], [Sales $])"
+          }
+        ]
+      },
+      {
+        "name": "Fact_Digital_Orders",
+        "columns": [
+          "store_id",
+          "week_start_date",
+          "order_count",
+          "ontime_percent"
+        ],
+        "measures": [
+          {
+            "name": "Digital Orders",
+            "expression": "SUM(Fact_Digital_Orders[order_count])"
+          },
+          {
+            "name": "On-Time %",
+            "expression": "AVERAGE(Fact_Digital_Orders[ontime_percent])"
+          }
+        ]
+      },
+      {
+        "name": "Fact_Shrink",
+        "columns": [
+          "store_id",
+          "week_start_date",
+          "shrink_dollars",
+          "mos_dollars"
+        ],
+        "measures": [
+          {
+            "name": "Shrink $",
+            "expression": "SUM(Fact_Shrink[shrink_dollars])"
+          },
+          {
+            "name": "MOS $",
+            "expression": "SUM(Fact_Shrink[mos_dollars])"
+          },
+          {
+            "name": "Shrink % of Sales",
+            "expression": "DIVIDE([Shrink $], [Sales $])"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Store",
+        "columns": [
+          "store_id",
+          "region",
+          "district",
+          "comp_status"
+        ]
+      },
+      {
+        "name": "Dim_Fiscal_Calendar",
+        "columns": [
+          "date",
+          "fiscal_week",
+          "fiscal_year",
+          "week_start_date",
+          "week_end_date"
+        ]
+      }
+    ]
+  }
+}
