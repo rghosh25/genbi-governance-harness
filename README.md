@@ -13,3 +13,8 @@ Built on a synthetic Fortune 500 retail dataset (~$6B annual revenue) with a 50-
 1. Clone the repo:
    ```bash
    git clone https://github.com/rghosh25/genbi-governance-harness
+2. Load /data into your BI tool (Power BI, Fabric, dbt, or SQL engine).
+
+3. Run the prompts listed in /evaluation/prompts.md.
+
+4. Score results against /evaluation/scoring.md.
