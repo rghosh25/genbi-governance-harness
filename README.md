@@ -12,4 +12,4 @@ Built on a synthetic Fortune 500 retail dataset (~$6B annual revenue) with a 50-
 ## Quick Start
 1. Clone the repo:
    ```bash
-   git clone https://github.com/<your-handle>/genbi-governance-harness
+   git clone https://github.com/rghosh25/genbi-governance-harness
