@@ -1,0 +1,4 @@
+store_id,region,district,comp_status
+101,East,D1,Comp
+102,West,D2,Non-Comp
+103,Central,D3,Comp
