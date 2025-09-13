@@ -12,7 +12,7 @@ An open framework for testing AI in Business Intelligence (BI) under enterprise 
 ## Quick Start
 
 1. Clone the repo:
-   git clone [https://github.com/](https://github.com/)<your-handle>/genbi-governance-harness
+   git clone [https://github.com/](https://github.com/)rghosh25/genbi-governance-harness
 2. Load the dataset from `/data` into your BI tool (Power BI, Microsoft Fabric, dbt, or SQL engine).
 3. Run the prompts listed in `/evaluation/prompts.md`.
 4. Score outputs using `/evaluation/scoring.md`.
